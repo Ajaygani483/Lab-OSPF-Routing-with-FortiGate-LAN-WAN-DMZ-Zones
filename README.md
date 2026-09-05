@@ -4,7 +4,7 @@
 Route between a LAN zone (two routers with loopback interfaces behind a switch), a DMZ zone (a third router), and a WAN zone (a router + end host), using a FortiGate firewall as the OSPF backbone for the LAN and DMZ segments, with explicit firewall policies controlling LAN↔DMZ traffic.
 
 ## Topology
-![Topology](topology.png)
+<img width="1461" height="650" alt="cffd819b-7a00-437d-8804-87b42668aa27" src="https://github.com/user-attachments/assets/71f4c2a0-1eb5-4e9f-8081-f6803b9d14a9" />
 
 | Device | Zone | Interface | IP | Loopbacks |
 |---|---|---|---|---|
@@ -43,10 +43,9 @@ The WAN segment (`192.168.1.0/24`) is intentionally kept outside OSPF — routin
 | LAN to DMZ | LAN (port2) → DMZ (port3), all/all | ALL | ACCEPT | Disabled |
 | Implicit Deny | all → all | ALL | DENY | — |
 
-![FortiGate OSPF config](fortigate-ospf-config.png)
-![FortiGate firewall policy](fortigate-firewall-policy.png)
-![FortiGate interfaces](fortigate-interfaces-1.png)
-![FortiGate WAN interface](fortigate-interfaces-2-wan.png)
+<img width="1920" height="880" alt="099f3196-a5d3-45f9-bf32-e9c25be569f1" src="https://github.com/user-attachments/assets/4ac37909-f90b-45f3-b1c1-78b6620a6422" />
+<img width="1910" height="881" alt="06c124c1-f4db-4c22-8008-dcc7abd9b5a9" src="https://github.com/user-attachments/assets/67d54e8a-e349-460b-83ec-e820278a58de" />
+<img width="1909" height="925" alt="a5283e1b-8bbf-4c5a-b3ee-a842455854fb" src="https://github.com/user-attachments/assets/cd750a32-f19d-45b5-83a4-480d22cb5cc6" />
 
 ## Router Configuration
 
